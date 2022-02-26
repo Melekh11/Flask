@@ -26,38 +26,10 @@ def promotion():
 
 @app.route("/image_mars")
 def image_mars():
-    return f'''<!doctype html>
-                        <html lang="en">
-                          <head>
-                            <meta charset="utf-8">
-                            <link rel="stylesheet"
-                            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
-                            integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
-                            crossorigin="anonymous">
-                            <link rel="stylesheet" type="text/css" href="{url_for('static', filename='css/style.css')}" />
-                            <title>Колонизация</title>
-                          </head>
-                          <body>
-                            <h1 class="login_form">Жди нас, Марс</h1>
-                            <img src="{url_for('static', filename='img/scale_1200.jpeg')}"
-                                alt="здесь должна была быть картинка, но не нашлась">
-                            <div class="alert alert-primary" role="alert">
-                              Когда человек изобретёт фотонный двигатель
-                            </div>
-                            <div class="alert alert-secondary" role="alert">
-                              вообще круто будет
-                            </div>
-                            <div class="alert alert-success" role="alert">
-                              ну а пока
-                            </div>
-                            <div class="alert alert-danger" role="alert">
-                              пишем рекламки планет
-                            </div>
-                            <div class="alert alert-warning" role="alert">
-                              такие дела
-                            </div>
-                          </body>
-                        </html>'''
+    return f'''<title>Привет, Яндекс!</title>
+        <h1>Жди нас, Марс!</h1>
+        <img src="{url_for('static', filename='img/scale_1200.jpeg')}"
+           alt="здесь должна была быть картинка, но не нашлась">'''
 
 
 if __name__ == '__main__':
