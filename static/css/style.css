@@ -1,3 +1,14 @@
-h1.login_form {
-    color: red;
+form.login_form {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 450px;
+    background-color: #ffd6c2;
+    border: 6px green;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+h1{
+    margin-left: 170px;
+    padding: 20px;
 }
