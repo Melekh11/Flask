@@ -44,7 +44,7 @@ def image_mars():
                                 <form class="login_form" method="post">
                                     <input type="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Введите имя" name="name">
                                     <input type="surname" class="form-control" id="surname" placeholder="Введите фамилию" name="surname">
-                                    <input type="email" class="form-control" id="email" placeholder="Введите фамилию" name="email">
+                                    <input type="email" class="form-control" id="email" placeholder="Введите почту" name="email">
                                     
                                     <div class="form-group">
                                         <label for="classSelect">Какое у Вас образование?</label>
