@@ -10,8 +10,8 @@ def index():
     return "<h1>Привет, колонизатор</h1>"
 
 
-@app.route('/choice/<planet_name>')
-def image_mars(planet_name):
+@app.route('/results/<nickname>/<int:level>/<float:rating>')
+def image_mars(nickname, level, rating):
     return f'''<!doctype html>
                         <html lang="en">
                           <head>
@@ -24,16 +24,16 @@ def image_mars(planet_name):
                           </head>
                           <body>
                             <div class="alert alert-primary" role="alert">
-                              <h1>моя рекомендация: {planet_name}</h1>
+                              <h1>Добрый день, {nickname}</h1>
                             </div>
                             <div class="alert alert-secondary" role="alert">
-                              <h2>планета крутая</h2>
+                              <h2>На данный момент Ваш этап: {level}</h2>
                             </div>
                             <div class="alert alert-success" role="alert">
-                              <h3>с виду кгруглая</h3>
+                              <h3>а рейтинг: {rating}</h3>
                             </div>
                             <div class="alert alert-danger" role="alert">
-                              <h4>что ещё надо</h4>
+                              <h4>all the best of luck to you, have a nice day</h4>
                             </div>
                           </body>
                         </html>'''
