@@ -1,5 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h3>любой текст</h3>
+    <h1>Список профессий</h1>
+    {% if smt == "ol" %}
+    <ol>
+        {% for user in l %}
+        <li>
+            {{ user }}
+        </li>
+        {% endfor %}
+    </ol>
+    {% else %}
+       <ul>
+           {% for user in l %}
+            <li>
+            {{ user }}
+            </li>
+        {% endfor %}
+       </ul>
+    {% endif %}
 {% endblock %}
