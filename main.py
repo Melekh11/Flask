@@ -1,35 +1,23 @@
-from flask import Flask, url_for
+from flask import Flask, url_for, render_template
+from loginform import LoginForm
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 
 
 @app.route('/')
 def index():
-    return "<h1>Миссия Колонизация Марса</h1>"
+    all = {}
+    all["title"] = "тайтл"
+    return render_template('index.html', **all)
 
 
-@app.route('/index')
-def index1():
-    return "<h1>И на Марсе будут яблони цвести!</h1>"
-
-
-@app.route("/promotion")
-def promotion():
-    return"<h2>Человечество вырастает из детства.</h2>" \
-          "<h2>Человечеству мала одна планета.</h2>" \
-          "<h2>Мы сделаем обитаемыми безжизненные пока планеты.</h2>" \
-          "<h2>И начнем с Марса!</h2>" \
-          "<h2>Присоединяйся!</h2>"
-
-
-@app.route("/image_mars")
-def image_mars():
-    return f'''<title>Привет, Яндекс!</title>
-        <h1>Жди нас, Марс!</h1>
-        <img src="{url_for('static', filename='img/scale_1200.jpeg')}"
-           alt="здесь должна была быть картинка, но не нашлась">
-           <p>красиво...</p>'''
-
+# @app.route('/login', methods=['GET', 'POST'])
+# def login():
+#     form = LoginForm()
+#     if form.validate_on_submit():
+#         return redirect('/success')
+#     return render_template('login.html', title='Авторизация', form=form)
 
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
