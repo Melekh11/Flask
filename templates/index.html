@@ -1,4 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
+    {% if "инженер" in prof or "строитель" in prof%}
+        <img src="/static/img/rover1.png" alt="картинка">
+    {% else %}
+        <img src="/static/img/rover2.png" alt="картинка">
+    {% endif %}
 {% endblock %}

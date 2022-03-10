@@ -5,11 +5,28 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 
 
+# a = url_for('static', filename='img/scale_1200.jpeg')
+# print(a)
+
+
 @app.route('/index/<tit>')
 def index(tit):
     all = {}
     all["title"] = tit
     return render_template('index.html', **all)
+
+
+@app.route("/")
+@app.route("/training/<prof>")
+def training(prof):
+    all = {}
+    all["prof"] = prof
+    all["link1"] = url_for('static', filename='img/rover1.png')
+    all["link2"] = url_for('static', filename='img/rover2.png')
+    print("!!!!!!!")
+    print(url_for('static', filename='img/scale_1200.jpeg'))
+    return render_template("index.html", **all)
+
 
 
 
