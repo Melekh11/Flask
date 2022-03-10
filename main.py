@@ -1,15 +1,17 @@
 from flask import Flask, url_for, render_template
-from loginform import LoginForm
+# from loginform import LoginForm
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 
 
-@app.route('/')
-def index():
+@app.route('/index/<tit>')
+def index(tit):
     all = {}
-    all["title"] = "тайтл"
+    all["title"] = tit
     return render_template('index.html', **all)
+
+
 
 
 # @app.route('/login', methods=['GET', 'POST'])
