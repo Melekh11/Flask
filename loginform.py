@@ -4,7 +4,8 @@ from wtforms.validators import DataRequired
 
 
 class LoginForm(FlaskForm):
-    username = StringField('Логин', validators=[DataRequired()])
-    password = PasswordField('Пароль', validators=[DataRequired()])
-    remember_me = BooleanField('Запомнить меня')
-    submit = SubmitField('Войти')
+    id_astr = StringField('id астронавта', validators=[DataRequired()])
+    pas_astr = PasswordField('пароль астронавта', validators=[DataRequired()])
+    id_cap = BooleanField('id капитана', validators=[DataRequired()])
+    pas_cap = PasswordField('пароль капитана', validators=[DataRequired()])
+    submit = SubmitField("Доступ")
