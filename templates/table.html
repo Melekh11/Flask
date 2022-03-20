@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="mini">Оформление Каюты</h1>
+<table>
+  <tr>
+    <td class="color_grey">
+        <h6>цвет стен</h6>
+    </td>
+      <td class="color_grey">
+          <h6>цвет стен</h6>
+      </td>
+  </tr>
+
+    <tr>
+        <td>
+            {% if age > 21 %}
+            <img src="/static/img/raveor1.jpg" alt="картинка для мальчиков">
+            {% else %}
+            <img src="/static/img/panda1.jpg" alt="картинка для девочек">
+            {% endif %}
+        </td>
+
+        {% if who == "female" %}
+        <td class="color1"></td>
+        {% else %}
+        <td class="color2"></td>
+        {% endif %}
+    </tr>
+</table>
+
+
+{% endblock %}

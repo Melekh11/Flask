@@ -38,5 +38,14 @@ def distribution():
     all["pass"] = arr_names
     return render_template("index.html", **all)
 
+
+@app.route("/table/<string:who>/<int:age>")
+def table(who, age):
+    all={}
+    all["who"] = who
+    all["age"] = age
+    return render_template("table.html", **all)
+
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')

@@ -61,9 +61,38 @@ h1.mini{
   font-size: 2em;
   font-weight: 700;
   text-decoration: underline;
-  margin-bottom: 1.5em;
-  margin-top: 1em;
   padding-left: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2{
+  font-size: 8px;
+  margin-bottom: 30px;
+  margin-top: 15px;
+  font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+
+}
+
+table{
+  border-color: aquamarine;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+td.color_grey{
+  background: slategrey;
+}
+
+td.color1{
+  background: #ffd6c2;
+  width: 300px;
+}
+
+td.color2{
+  background: green;
+  width: 300px;
 }
 
 div.nothing{
